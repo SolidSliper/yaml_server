@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+# Nazarii Kretsul
+# Ide mi 7 testov zo 8, a neviem co sa deje v druhom teste, objavuje sa nejaka chyba zo soketom
+# File "/usr/lib/python3.11/socket.py", line 706, in readinto
+#    return self._sock.recv_into(b)
+
 import socket
 import multiprocessing
 import logging
@@ -182,8 +187,6 @@ def handle_client(client_socket, addr):
         logging.info(f'Bad request {addr}')
     except ConnectionClosed as e:
         logging.info(f'Conection closed {addr}')
-    except ConnectionResetError as e:
-        logging.error(f'{e} {addr}\n')
 
     logging.info(f'handle_client {addr} stop')
     
