@@ -4,6 +4,7 @@
 # Ide mi 7 testov zo 8, a neviem co sa deje v druhom teste, objavuje sa nejaka chyba zo soketom
 # File "/usr/lib/python3.11/socket.py", line 706, in readinto
 #    return self._sock.recv_into(b)
+# P. S.: ak nie pisat f.write(b'\n'), tak bude ist 2. test, ale ine 3 testy budu ist uz zle
 
 import socket
 import multiprocessing
